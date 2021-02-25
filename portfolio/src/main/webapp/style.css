@@ -1,9 +1,82 @@
-#content {
-  margin-left: auto;
-  margin-right: auto;
-  width: 650px;
+:root {
+  --pink: rgb(247, 136, 136);
+  --yellow: rgb(243, 210, 80);
+  --offwhite: rgb(236, 236, 236);
+  --lightBlue: rgb(144, 204, 244);
+  --blue: rgb(93, 162, 213);
+  --black: rgb(28, 33, 32);
 }
 
-#greeting-container {
-  margin-top: 20px;
+@font-face {
+  font-family: Spartan;
+  src: url(./fonts/LeagueSpartan-Bold.otf);
+}
+
+@font-face {
+  font-family: HK Grotesk Light;
+  src: url(./fonts/HKGrotesk-Light.otf);
+}
+
+@font-face {
+  font-family: HK Grotesk Med;
+  src: url(./fonts/HKGrotesk-Medium.otf);
+}
+
+body {
+  background-color: var(--offwhite);
+  padding-left: 8%;
+  padding-right: 8%;
+  box-sizing: border-box;
+}
+
+h1 {
+  color: var(--black);
+  font-family: Spartan;
+  font-size: 3rem;
+}
+
+h2 {
+  font-family: HK Grotesk Light;
+  font-size: 2rem;
+}
+
+.navbar {
+  height: 15%;
+  display: flex;
+  align-items: center;
+  background: var(--offwhite);
+}
+
+nav {
+  flex: 1;
+  text-align: right;
+}
+
+nav ul li {
+  list-style: none;
+  display: inline-block;
+  margin-left: 60px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  font-family: HK Grotesk Light;
+  font-size: 1rem;
+  color: var(--black);
+}
+
+nav ul li a:hover {
+  color: var(--pink);
+  font-family: HK Grotesk Med;
+  text-decoration: none;
+}
+
+.logo {
+  width: 100px;
+  cursor: pointer;
+}
+
+.intro {
+  background: var(--blue);
+  text-align: left;
 }

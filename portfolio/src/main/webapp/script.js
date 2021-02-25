@@ -11,16 +11,18 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
-
-function addRandomFunFact() {
+/*let i = 0;
+function typeWriter() {
   const facts =
-      ["My little siblings are twins!", 
-      "I once had my art shown in the Dali Museum in St. Petersburg",
-      "I make some really good omelettes", 
-      "I love collecting crystals :)"];
+      ["I'm a Digital Arts and Sciences Engineering student", 
+      "I'm a Full-Stack Developer",
+      "I'm a Scrum Master", 
+      "I'm in Google SPS >:)"];
 
-  const fact = "Fun Fact: " + facts[Math.floor(Math.random() * facts.length)];
-
-  const funFactContainer = document.getElementById('fun-fact-container');
-  funFactContainer.innerText = fact;
-}
+  const fact = facts[Math.floor(Math.random() * facts.length)];
+  if (i < fact.length) {
+    //document.getElementById("typewriter").innerHTML += fact.charAt(i);
+    //i++;
+    //setTimeout(typeWriter, 50);
+  }
+}*/
