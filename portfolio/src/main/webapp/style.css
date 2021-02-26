@@ -23,7 +23,7 @@
 }
 
 body {
-  background-color: var(--offwhite);
+  background-color: white;
 }
 
 h1 {
@@ -35,7 +35,7 @@ h1 {
 h2 {
   font-family: HK Grotesk Light;
   font-size: 2rem;
-  margin: 0rem;
+  margin-bottom: 0rem;
 }
 
 .navbar {
@@ -80,31 +80,43 @@ nav ul li a:hover {
 .intro {
   padding: 8%;
   box-sizing: border-box;
-  background: var(--blue);
+  background-image: url(./images/website_backgrounds.png);
+  background-position: right top;
+  background-size: cover;
   text-align: left;
 }
 
 #about {
+  padding: 8%;
+  box-sizing: border-box;
   background: var(--pink);
   text-align: left;
 }
 
 #experience {
+  padding: 8%;
+  box-sizing: border-box;
   background: var(--yellow);
   text-align: left;
 }
 
 #projects {
+  padding: 8%;
+  box-sizing: border-box;
   background: var(--lightBlue);
   text-align: left;
 }
 
 #involvement {
-  background: var(--pink);
+  padding: 8%;
+  box-sizing: border-box;
+  background: var(--blue);
   text-align: left;
 }
 
 #contact {
-  background: var(--blue);
+  padding: 8%;
+  box-sizing: border-box;
+  background: var(--offwhite);
   text-align: left;
 }
