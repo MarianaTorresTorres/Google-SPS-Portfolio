@@ -26,7 +26,7 @@ let backspace = false;
 window.onload = function() {
   typeWriter();
   i = 0;
-  txt = "I'm a " + facts[Math.floor(Math.random() * facts.length)];
+  txt = "I'm a " + facts[0];
   backspace = false;
 };
 

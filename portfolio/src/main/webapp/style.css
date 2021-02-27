@@ -89,28 +89,28 @@ nav ul li a:hover {
 #about {
   padding: 8%;
   box-sizing: border-box;
-  background: var(--pink);
+  background: var(--lightBlue);
   text-align: left;
 }
 
 #experience {
   padding: 8%;
   box-sizing: border-box;
-  background: var(--yellow);
+  background: var(--blue);
   text-align: left;
 }
 
 #projects {
   padding: 8%;
   box-sizing: border-box;
-  background: var(--lightBlue);
+  background: var(--pink);
   text-align: left;
 }
 
 #involvement {
   padding: 8%;
   box-sizing: border-box;
-  background: var(--blue);
+  background: var(--yellow);
   text-align: left;
 }
 
@@ -118,5 +118,34 @@ nav ul li a:hover {
   padding: 8%;
   box-sizing: border-box;
   background: var(--offwhite);
-  text-align: left;
+  text-align: center;
+}
+
+#contact h1 {
+  margin-bottom: 0rem;
+}
+
+#contact h2 {
+  font-size: 1.5rem;
+  margin-top: 1rem;
+  margin-bottom: 3rem;
+}
+
+.social-media {
+  text-align: center;
+}
+
+.icons {
+  color: var(--black);
+  padding: 20px;
+  font-size: 3rem;
+  width: 30px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 50%;
+}
+
+.icons:hover {
+  opacity: 0.7;
 }
