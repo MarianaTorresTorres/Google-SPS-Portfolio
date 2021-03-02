@@ -30,12 +30,12 @@ window.onload = function() {
   backspace = false;
 };
 
-document.addEventListener("click", function() {
+function typeButton() {
   typeWriter();
   i = 0;
   txt = "I'm a " + facts[Math.floor(Math.random() * facts.length)];
   backspace = false;
-});
+}
 
 function typeWriter() {
   if (i <= txt.length && !backspace) {

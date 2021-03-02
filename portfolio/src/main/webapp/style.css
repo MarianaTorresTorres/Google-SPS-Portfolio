@@ -1,9 +1,12 @@
 :root {
-  --pink: rgb(247, 136, 136);
+  --pink: rgb(255, 102, 196);
+  --pinkPastel: rgb(255, 173, 224);
+  --magenta: rgb(203, 108, 230);
+  --magentaPastel: rgb(225, 168, 240);
+  --purple: rgb(140, 82, 255);
+  --purplePastel: rgb(187, 153, 255);
   --yellow: rgb(243, 210, 80);
   --offwhite: rgb(236, 236, 236);
-  --lightBlue: rgb(144, 204, 244);
-  --blue: rgb(93, 162, 213);
   --black: rgb(28, 33, 32);
 }
 
@@ -36,6 +39,17 @@ h2 {
   font-family: HK Grotesk Light;
   font-size: 2rem;
   margin-bottom: 0rem;
+}
+
+h3 {
+  font-family: HK Grotesk Med;
+  font-size: 2rem;
+  margin-bottom: 0rem;
+}
+
+p {
+  font-family: HK Grotesk Med;
+  font-size: 1rem;
 }
 
 .navbar {
@@ -72,6 +86,18 @@ nav ul li a:hover {
   text-decoration: underline;
 }
 
+button {
+  border-radius: 8px;
+  font-size: 20px;
+  font-family: HK Grotesk Light;
+  transition-duration: 0.3s;
+}
+
+button:hover {
+  background-color: var(--purple);
+  color: var(--offwhite);
+}
+
 .logo {
   width: 100px;
   cursor: pointer;
@@ -80,31 +106,115 @@ nav ul li a:hover {
 .intro {
   padding: 8%;
   box-sizing: border-box;
-  background-image: url(./images/website_backgrounds.png);
+  background-image: url(https://cdn.glitch.com/23f6eeca-cb3d-44f2-9608-0379158305f6%2Fwebsite_background.png?v=1614489189113);
   background-position: right top;
   background-size: cover;
   text-align: left;
 }
 
+.intro-column {
+  float: right;
+  margin-right: 7%;
+}
+
 #about {
-  padding: 8%;
+  padding-left: 8%;
+  padding-right: 5%;
+  padding-top: 5%;
+  padding-bottom: 5%;
   box-sizing: border-box;
-  background: var(--lightBlue);
+  background: var(--magentaPastel);
   text-align: left;
+}
+
+#about:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.column {
+  float: left;
+  width: 50%;
+}
+
+.about-list {
+  float: left;
+}
+
+.about-list ul li {
+  list-style: none;
+  font-family: HK Grotesk Med;
+  font-size: 1rem;
+}
+
+.about-list ul li span {
+  padding-right: 5px;
+}
+
+.headshot {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
+  border-radius: 8px;
+}
+
+.resume-button {
+  padding-top: 1rem;
+  text-align: center;
 }
 
 #experience {
   padding: 8%;
   box-sizing: border-box;
-  background: var(--blue);
+  background: var(--purplePastel);
   text-align: left;
 }
 
 #projects {
-  padding: 8%;
+  padding-left: 8%;
+  padding-right: 8%;
+  padding-bottom: 8%;
+  padding-top: 3%;
   box-sizing: border-box;
-  background: var(--pink);
+  background: var(--pinkPastel);
   text-align: left;
+  height: 80rem;
+}
+
+.column h2 {
+  margin-top: 0px;
+}
+
+.project-img {
+  display: block;
+  margin-left: 10%;
+  margin-right: auto;
+  margin-top: 10%;
+  margin-bottom: 10%;
+  width: 100%;
+  border-radius: 8px;
+}
+
+.project-img-one {
+  display: block;
+  margin-left: auto;
+  margin-right: 50px;
+  margin-top: 10%;
+  margin-bottom: 10%;
+  width: 50%;
+  border-radius: 8px;
+}
+
+.project-img-two {
+  display: block;
+  margin-left: 50px;
+  margin-right: auto;
+  margin-top: 10%;
+  margin-bottom: 10%;
+  width: 50%;
+  border-radius: 8px;
 }
 
 #involvement {
