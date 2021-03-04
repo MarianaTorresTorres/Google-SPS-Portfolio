@@ -12,17 +12,60 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-/**
- * Adds a random greeting to the page.
- */
-function addRandomGreeting() {
-  const greetings =
-      ['Hello world!', '¡Hola Mundo!', '你好，世界！', 'Bonjour le monde!'];
+let i = 0;
+let facts = [
+  "Digital Arts and Sciences Engineer ",
+  "Full-Stack Developer ",
+  "Scrum Master ",
+  "Google SPS participant! >:) "
+];
+let txt = "I'm a " + facts[0];
+let speed = 75;
+let backspace = false;
+let blinkCursor = true;
 
-  // Pick a random greeting.
-  const greeting = greetings[Math.floor(Math.random() * greetings.length)];
+window.onload = function() {
+  typeFact();
+  i = 0;
+  txt = "I'm a " + facts[0];
+  backspace = false;
+};
 
-  // Add it to the page.
-  const greetingContainer = document.getElementById('greeting-container');
-  greetingContainer.innerText = greeting;
+function typeButton() {
+  typeFact();
+  i = 0;
+  txt = "I'm a " + facts[Math.floor(Math.random() * facts.length)];
+  backspace = false;
 }
+
+/*This function adds a single character to the displayed message until complete 
+and then reverses that process*/
+function typeFact() {
+  if (i <= txt.length && !backspace) {
+    document.getElementById("typed").innerHTML = txt.substring(0, i);
+    i++;
+    if (i === txt.length) {
+      backspace = true;
+    } else {
+      setTimeout(typeFact, speed);
+    }
+  }
+  if (backspace) {
+    if (i >= 0) {
+      document.getElementById("typed").innerHTML = txt.substring(0, i);
+      i--;
+      setTimeout(typeFact, speed);
+    }
+  }
+}
+
+//This function creates the blinking cursor
+setInterval(() => {
+  if (blinkCursor) {
+    document.getElementById("cursor").style.opacity = 0;
+    blinkCursor = false;
+  } else {
+    document.getElementById("cursor").style.opacity = 1;
+    blinkCursor = true;
+  }
+}, speed * 5);
