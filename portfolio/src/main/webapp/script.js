@@ -20,48 +20,52 @@ let facts = [
   "Google SPS participant! >:) "
 ];
 let txt = "I'm a " + facts[0];
-let speed = 50;
+let speed = 75;
 let backspace = false;
+let blinkCursor = true;
 
 window.onload = function() {
-  typeWriter();
+  typeFact();
   i = 0;
   txt = "I'm a " + facts[0];
   backspace = false;
 };
 
 function typeButton() {
-  typeWriter();
+  typeFact();
   i = 0;
   txt = "I'm a " + facts[Math.floor(Math.random() * facts.length)];
   backspace = false;
 }
 
-function typeWriter() {
+/*This function adds a single character to the displayed message until complete 
+and then reverses that process*/
+function typeFact() {
   if (i <= txt.length && !backspace) {
-    document.getElementById("typed").innerHTML = txt.substring(0, i) + "|";
+    document.getElementById("typed").innerHTML = txt.substring(0, i);
     i++;
-    if (i === txt.length + 1) {
+    if (i === txt.length) {
       backspace = true;
-      setTimeout(wait(), 15000);
+    } else {
+      setTimeout(typeFact, speed);
     }
-    setTimeout(typeWriter, speed);
   }
   if (backspace) {
     if (i >= 0) {
-      document.getElementById("typed").innerHTML = txt.substring(0, i) + "|";
+      document.getElementById("typed").innerHTML = txt.substring(0, i);
       i--;
-      setTimeout(typeWriter, speed + 10);
+      setTimeout(typeFact, speed);
     }
   }
 }
 
-function wait() {
-  for (let num = 0; num < 100; num++) {
-    if (num % 2 === 0) {
-      document.getElementById("typed").innerHTML = txt + "|";
-    } else {
-      document.getElementById("typed").innerHTML = txt;
-    }
+//This function creates the blinking cursor
+setInterval(() => {
+  if (blinkCursor) {
+    document.getElementById("cursor").style.opacity = 0;
+    blinkCursor = false;
+  } else {
+    document.getElementById("cursor").style.opacity = 1;
+    blinkCursor = true;
   }
-}
+}, speed * 5);
