@@ -19,23 +19,26 @@ let backspace = false;
 let blinkCursor = true;
 
 window.onload = function() {
-  fetchText();
+  fetchText(0);
   typeFact();
-  fetchText();
-  i = 0;
-  backspace = false;
 };
 
-async function fetchText() {
+async function fetchText(index) {
     const responseFromServer = await fetch('/servlet');
-    txt = await responseFromServer.text();
+    let facts = await responseFromServer.json();
+    console.log(index);
+    if(index >= 0) {
+        txt = "I'm a " + facts[index];
+    } else {
+        txt = "I'm a " + facts[Math.floor(Math.random() * facts.length)];
+    }
 }
 
 function typeButton() {
-  typeFact();
   i = 0;
-  fetchText();
+  fetchText(-1);
   backspace = false;
+  typeFact();
 }
 
 /*This function adds a single character to the displayed message until complete 
