@@ -26,7 +26,6 @@ window.onload = function() {
 async function fetchText(index) {
     const responseFromServer = await fetch('/servlet');
     let facts = await responseFromServer.json();
-    console.log(index);
     if(index >= 0) {
         txt = "I'm a " + facts[index];
     } else {

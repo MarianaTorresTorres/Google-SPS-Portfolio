@@ -177,6 +177,18 @@ button:hover {
   width: 70%;
 }
 
+.submit-button {
+  border-radius: 8px;
+  font-family: HK Grotesk Light;
+  font-size: 20px;
+  transition-duration: 0.3s;
+}
+
+.submit-button:hover {
+  background-color: var(--purple);
+  color: var(--offwhite);
+}
+
 .resume-button {
   padding-top: 1rem;
   text-align: center;
