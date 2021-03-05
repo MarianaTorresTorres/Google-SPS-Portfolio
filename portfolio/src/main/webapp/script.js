@@ -13,28 +13,28 @@
 // limitations under the License.
 
 let i = 0;
-let facts = [
-  "Digital Arts and Sciences Engineer ",
-  "Full-Stack Developer ",
-  "Scrum Master ",
-  "Google SPS participant! >:) "
-];
-let txt = "I'm a " + facts[0];
+let txt = "I'm a ";
 let speed = 75;
 let backspace = false;
 let blinkCursor = true;
 
 window.onload = function() {
+  fetchText();
   typeFact();
+  fetchText();
   i = 0;
-  txt = "I'm a " + facts[0];
   backspace = false;
 };
+
+async function fetchText() {
+    const responseFromServer = await fetch('/servlet');
+    txt = await responseFromServer.text();
+}
 
 function typeButton() {
   typeFact();
   i = 0;
-  txt = "I'm a " + facts[Math.floor(Math.random() * facts.length)];
+  fetchText();
   backspace = false;
 }
 
