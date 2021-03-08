@@ -240,8 +240,7 @@ button:hover {
   margin-bottom: 0;
 }
 
-#contact h2 {
-  font-size: 1.5rem;
+.contact-h2 {
   margin-bottom: 3rem;
   margin-top: 1rem;
 }
@@ -263,4 +262,33 @@ button:hover {
 
 .icons:hover {
   opacity: 0.7;
+}
+
+.form-h2 {
+    margin: 2rem auto 1rem auto;
+}
+
+.submit-button {
+  border-radius: 8px;
+  font-family: HK Grotesk Light;
+  font-size: 20px;
+  margin-top: 1rem;
+  transition-duration: 0.3s;
+}
+
+.submit-button:hover {
+  background-color: var(--purple);
+  color: var(--offwhite);
+}
+
+textarea {
+  background-color: var(--offwhite);
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  box-sizing: border-box;
+  font-family: HK Grotesk Med;
+  font-size: 1rem;
+  padding: 20px 20px 0 20px;
+  resize: none;
+  width: 75%;
 }
