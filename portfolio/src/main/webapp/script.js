@@ -33,6 +33,8 @@ async function fetchText(index) {
     }
 }
 
+/*This function gets called when the user presses the intro button, gets the data from the
+servlet, and executes the typeFact function */
 function typeButton() {
   i = 0;
   fetchText(-1);
