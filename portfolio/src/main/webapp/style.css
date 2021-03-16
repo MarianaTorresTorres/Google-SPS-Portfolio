@@ -184,7 +184,25 @@ button:hover {
 
 #experience {
   background: var(--purplePastel);
-  padding: 8%;
+  height: 45rem;
+  padding: 3% 8% 8% 8%;
+}
+
+.work-logo {
+  border-radius: 8px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
+}
+
+#experience .column {
+  background: var(--offwhite);
+  border-radius: 8px;
+  padding: 2rem;
+  margin: 0 1rem 0 1rem;
+  width: 40%;
+  height: 400px;
 }
 
 #projects {
